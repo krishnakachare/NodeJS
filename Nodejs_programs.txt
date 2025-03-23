@@ -1,0 +1,196 @@
+Program-1: Addition using Command line argument
+===============================================
+1. Add the below code in addition_demo.js file
+   let args = process.argv.slice(2);
+   const [a, b] = args;
+   console.log(`Addtion of ${a} & ${b} is ${+a + +b}`);
+2. Run the file 
+   node addition_demo.js 10 20
+
+
+Program-2: Arithmetic Example using Command line argument
+=========================================================
+const arg = process.argv.slice(2);
+if (process.argv.length === 2) {
+  console.error("Please provide 1 operator and 2 operand values");
+  process.exit(1);
+}
+const op = arg[0];
+const num1 = Number(arg[1]);
+const num2 = Number(arg[2]);
+switch (op) {
+  case "+":
+    console.log(`Result of ${num1} + ${num2} = ${num1 + num2}`);
+    break;
+  case "-":
+    console.log(`Result of ${num1} - ${num2} = ${num1 - num2}`);
+    break;
+  case "*":
+    console.log(`Result of ${num1} * ${num2} = ${num1 * num2}`);
+    break;
+  case "/":
+    if (num2 == 0) {
+      console.log("cannot be divided by zero!!");
+    } else {
+      console.log(`Result of ${num1} / ${num2} = ${num1 / num2}`);
+    }
+    break;
+  default:
+    console.log(`operation cannot be performed!!`);
+}
+
+
+
+
+Program-3: URL Module
+=====================
+var url = require('url');
+var adr = 'http://localhost:8080/default.htm?year=2017&month=february';
+var q = url.parse(adr, true);
+
+console.log(q.host); //returns 'localhost:8080'
+console.log(q.pathname); //returns '/default.htm'
+console.log(q.search); //returns '?year=2017&month=february'
+
+var qdata = q.query; //returns an object: { year: 2017, month: 'february' }
+console.log(qdata.month); //returns 'february'
+
+
+
+
+Program-4: File Operations
+==========================
+let fs = require('fs');
+// Over write the exisiting text
+fs.writeFile('myText.txt','This is about the Fs',function(){
+    console.log('Task Done')
+});
+// Keep adding text in same file
+fs.appendFile('myCode.txt','I m doing nodejs \n',function(){
+    console.log('Task Done')
+});
+// ReadFile
+fs.readFile('location.json','utf-8',function(err,data){
+    if(err) throw err;
+    console.log(data)
+});
+//Rename File
+fs.rename('myText.txt','mydata.txt',function(err){
+    if(err) throw err;
+    console.log('File Renamed')
+});
+// Delete File
+fs.unlink('mydata.txt',function(err){
+    if(err) throw err;
+    console.log('File Deleted')
+})
+
+
+
+without CORS
+============
+1. add the below backend code in a file
+
+const express = require("express");
+const app = express();
+const port = 5000;
+app.get("/cars", (request, response) => {
+  return response.json(["Mercedes", "BMW", "Toyota", "Audi"]);
+});
+app.listen(port, () => {
+  console.log("   >  backend started...");
+});
+
+2. open https://www.w3schools.com/ and console, execute the below code in console
+fetch("http://localhost:5000/cars").then(req => req.text()).then(console.log)
+
+
+
+Template Engine - PUG
+=====================
+1. npm init -y
+2. npm install express pug
+3. add the below code in app.js
+	const express = require('express');
+	const app = express();
+	
+	app.set('views', './views');
+	app.set('view engine', 'pug');
+
+	app.get('/', (req, res) => {
+		res.render('index');
+	});
+	app.listen(5000, () => {
+		console.log('Server started at port 5000');
+	});
+
+
+Weather Application using EJS
+=============================
+1. npm init -y
+2. npm install express ejs axios
+
+
+
+
+MongoDB + NodeJs
+=================
+1. npm i express mongodb
+2. Add the below code for DB connection
+	const express = require("express");
+	const app = express();
+	const MongoClient = require("mongodb").MongoClient;
+	app.get("/users", async function (req, res) {
+	  const client = await MongoClient.connect("mongodb://localhost:27017/");
+	  const users = client.db("march2023").collection("users").find({});
+	  const result = await users.toArray();
+	  res.json(result);
+	  await client.close();
+	});
+
+
+
+GraphQL
+========
+1. npm init -y
+2. npm install graphql express express-graphql
+3. add server.js
+
+
+query getSingleCourse($courseID: Int!) {
+    course(id: $courseID) {
+        title
+        author
+        description
+        topic
+        url
+    }
+}
+-----------
+{ 
+    "courseID":1
+}
+
+
+
+
+express validator
+=================
+npm init -y
+npm install express ejs body-parser express-validator
+
+
+Redis
+=====
+npm i express axios redis@3.1.2
+
+
+
+Swagger
+=======
+1. npm init -y
+2. npm install swagger-jsdoc swagger-ui-express 
+3. add server.js
+4. add the file swagger.json to define the operations.
+5. add the file swagger.css to define custom css
+6. Node server.js and try 'http://localhost:5000/api-docs/'

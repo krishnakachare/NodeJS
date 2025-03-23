@@ -1,0 +1,30 @@
+Interviewer- Explain Node.js Architecture and How Client Requests Are Handled Efficiently
+
+Let's start with Example: 😋 Imagine a small restaurant.
+- The Event Queue is the line of customers waiting to place their orders.
+- The Event Loop is the cashier who takes the orders and decides whether the customer wants a quick-to-prepare item (like a drink) or a more complex dish (like a gourmet meal).
+- Quick orders are handled directly by the cashier, while complex orders are sent to the kitchen.
+- The kitchen has only a few chefs (workers in the Thread Pool), and each chef can prepare only one meal at a time.
+- If all chefs are busy, new orders have to wait until a chef is free. To serve more customers efficiently, the restaurant prefers quick-to-prepare items to avoid long waits.
+
+
+1. Client Request:
+  When a client sends a request to the Node.js server, it arrives at the Event Queue. Think of the Event Queue as a waiting room where requests are lined up, waiting for their turn to be processed.
+
+2. Event Queue and Event Loop:
+  The Event Loop is like a vigilant receptionist who constantly keeps an eye on the Event Queue. If there's any request in the queue, the Event Loop picks it up in the order they arrived (FIFO - First In, First Out).
+
+3. Request Types:
+  Once the Event Loop picks a request, it checks whether the request is for a Non-Blocking (Asynchronous) Operation or a Blocking (Synchronous) Operation.
+
+4. Non-Blocking Operations:
+  If the request is non-blocking, the Event Loop processes it directly and quickly returns the result. Non-blocking operations are like instant tasks that the receptionist can handle on the spot without much delay.
+
+5. Blocking Operations:
+  If the request is blocking, it needs more time and resources. Such requests are sent to the Thread Pool. The Thread Pool is like a group of specialized workers (threads) who handle time-consuming tasks.
+
+6. Thread Pool and Workers:
+  The Thread Pool contains a limited number of workers, typically 4. Each worker can handle one blocking request at a time. If a worker is available, the task is assigned to them. If all workers are busy, the request has to wait until a worker becomes free.
+
+7. Scalability Issues:
+  This limited number of workers can lead to scalability issues. If there are too many blocking requests, they have to wait, slowing down the system. To avoid this, it's better to use non-blocking operations whenever possible. You can increase the number of workers, but it depends on the CPU cores of your machine.
