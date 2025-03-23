@@ -1,0 +1,7 @@
+ES-6 and above
+===============
+1. const & let 
+2. From IIFEs to blocks
+3. concatenating strings to template literals
+4. Multi-line strings
+6. default parameter values
