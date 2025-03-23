@@ -1,0 +1,35 @@
+1. What is Node.js?
+2. So, what's the main difference between Node.js and JavaScript?
+3. Can you explain the concept of non-blocking I/O in Node.js?
+4. How does Node.js handle child threads?
+5. When would you use Node.js over other backend technologies?
+6. What's an event loop in Node.js lingo?
+7. How does Node.js handle concurrency?
+8. Tell me about npm. What's it all about?
+9. Ever worked with Express.js? If so, what's it used for?
+10. Let's dive into callbacks: What are they, and why are they important in Node.js?
+11. Okay, let's talk about Promises. What problem do they solve in Node.js?
+12. How does error handling work in Node.js?
+13. Ever heard of callback hell? How does one avoid it?
+14. Alright, what's the purpose of the package.json file?
+15. Can you tell me about streams in Node.js?
+16. How does Node.js manage dependencies?
+17. What's the role of require() in Node.js?
+18. Let's discuss the global object in Node.js. What's its significance?
+19. Can you explain the difference between process.nextTick() and setImmediate()?
+20. How does Node.js handle buffer objects?
+21. What's the purpose of the os module in Node.js?
+22. Let's talk about debugging in Node.js. What tools do you use?
+23. How does Node.js handle memory leaks?
+24. What's the role of middleware in Express.js?
+25. Can you explain the difference between res.send() and res.json() in Express.js?
+26. Ever worked with templating engines in Express.js? Which one's your favorite?
+27. What's the purpose of app.use() in Express.js?
+28. Let's discuss RESTful APIs. What are they, and how does Express.js help implement them?
+29. What's the purpose of app.get(), app.post
+(), app.put(), and app.delete() in Express.js?
+30. How does Express.js handle routing?
+31. Let's talk about authentication in Express.js. How do you implement it?
+32. Can you explain the concept of middleware chaining in Express.js?
+33. What's the purpose of body-parser middleware in Express.js?
+34. Let's dive into WebSockets: What are they, and how do you implement them in Node.js?
