@@ -40,8 +40,6 @@ switch (op) {
 }
 
 
-
-
 Program-3: URL Module
 =====================
 var url = require('url');
@@ -54,8 +52,6 @@ console.log(q.search); //returns '?year=2017&month=february'
 
 var qdata = q.query; //returns an object: { year: 2017, month: 'february' }
 console.log(qdata.month); //returns 'february'
-
-
 
 
 Program-4: File Operations
@@ -86,7 +82,6 @@ fs.unlink('mydata.txt',function(err){
 })
 
 
-
 without CORS
 ============
 1. add the below backend code in a file
@@ -103,7 +98,6 @@ app.listen(port, () => {
 
 2. open https://www.w3schools.com/ and console, execute the below code in console
 fetch("http://localhost:5000/cars").then(req => req.text()).then(console.log)
-
 
 
 Template Engine - PUG
@@ -131,8 +125,6 @@ Weather Application using EJS
 2. npm install express ejs axios
 
 
-
-
 MongoDB + NodeJs
 =================
 1. npm i express mongodb
@@ -147,7 +139,6 @@ MongoDB + NodeJs
 	  res.json(result);
 	  await client.close();
 	});
-
 
 
 GraphQL
@@ -170,8 +161,6 @@ query getSingleCourse($courseID: Int!) {
 { 
     "courseID":1
 }
-
-
 
 
 express validator

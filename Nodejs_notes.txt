@@ -1,63 +1,3 @@
-Recommended to learn before Node.js
-===================================
-Variables
-Scopes
-Functions
-Arrow Function
-this operator
-Loops
-String
-Array
-fetch()
-ES-6 and beyond 
-(class,module,rest,spread,promise,async await)
-
-
-
-Node.js Syllabus
-================
--Node.JS - Introduction, Advantages
--Traditional Web Server Model, Node.js Process Model
--Local Environment SetUp
--Node.js Console - REPL
--NPM , NPX , NVM
--Modules: Core, Local , 3rd party
--Global Objects
--File System
--Debugging Node JS Application
--Buffer & Streams
--Events (Event Loop,Event Emitter)
--Creating web server & Handling http requests (HTTP)
--Express Framework-routes
--NodeJS & MongoDB Connection
--Mongoose,graphQL
--Template Engines (Jade/Pug, vash, EJS, handlebars)
--Redis (Caching)
--Swagger  (API Documentation)
--Unit testing (Mocha, Jasmine)
-
-
-
-Projects
-========
--CRUD HTTP Module
--CRUD ExpressJS
--GraphQL
--Template Engine
--Server Side Validation
--Image Upload (express-file-uploader)
--Image Upload (Formidable) 
--NodeEmailer (Send Email)
--Chat Application (Socket.io)
--JWT Token
--Swagger
--Unit testing
-
-
-
-
-
-
 What NodeJs is?
 ===============
 -Opensource and cross-platform JavaScript runtime environment.
@@ -123,15 +63,12 @@ JS Code --> V8  -->  Parsing  --> Abstract Syntax Tree  --> ByteCode -->
 Machine Code  --> Runs On CPU
 
 
-
-
 What Can Node.js Do?
 ====================
 -Node.js can generate dynamic page content.
 -Node.js can create, open, read, write, delete, and close files on the server.
 -Node.js can collect form data.
 -Node.js can add, delete, modify data in the database.
-
 
 
 How NodeJs works/NodeJs Process Model
@@ -147,7 +84,6 @@ this single thread doesn't have to wait for the request to complete and is free 
 -Internally, Node.js uses libuv for the event loop which in turn uses internal C++ thread pool to provide asynchronous I/O.
 
 
-
 1. Clients send HTTP requests to NodeJS server.
 2. Event-Loop(Single Thread) delegates long-running operations to non-blocking workers and becomes available to handle the next request.
 3. When asynchronous I/O work completes, EventLoop processes the request further and sends the response to the client.
@@ -157,7 +93,6 @@ https://cdn.buttercms.com/0Nh1yR6SSPwqnsKYSfHa
  
 process.env.UV_THREADPOOL_SIZE=6  (4 default, max 128)
 Worker Threads- File System API, Cryptography, Compression, DNS Lookup
-
 
 
 NodeJs vs Others
@@ -177,7 +112,6 @@ Here is how Node.js handles a file request:
 -Node.js runs single-threaded, non-blocking, asynchronously programming, which is very memory efficient.
 
 
-
 Blocking vs Non-Blocking I/O
 ============================
 -waiter takes the order and gives it to chef.
@@ -192,7 +126,6 @@ Blocking vs Non-Blocking I/O
 Q. What is Reactor Pattern in Node.js?
 -Assigning a callback function to each I/O operation is called the Reactor Pattern.
 -It’s the responsibilty of the system to run the handler function once the data from the event is available.
-
 
 
 
@@ -234,14 +167,14 @@ NVM useful commands
  
  
 
-
 REPL
-====
+===================================
 -REPL stands for Read-Eval-Print-Loop.
- R - Reads user's input
- E - Evaluates the expression
- P - Prints the result
- L - Loops the above things until user kills the process
+	R - Reads user's input
+	E - Evaluates the expression
+	P - Prints the result
+	L - Loops the above things until user kills the process
+
 -Node.js comes with virtual environment called REPL.
 -it is similar to Shell in Linux or command prompt in windows where 
  a command is entered and the system responds with an output in an interactive mode
@@ -262,7 +195,7 @@ REPL
 
 
 REPL Command		Description
---------------------------------
+------------------------------------------------------------------
 .help				Display help on all the commands
 .editor			    enables editor mode, multiline JS code , ctrl+D  
 Tab Key				Display the list of all commands. (Math. tab twice)
@@ -273,7 +206,6 @@ Up/Down Keys		See previous commands applied in REPL.
 ctrl + c			Terminate the current command.
 ctrl + c (twice)	Exit from the REPL.
 ctrl + d			Exit from the REPL.
-
 
 
 How to exit from a Node.js shell
@@ -310,7 +242,6 @@ Assignment:
 Note: hanlde edge cases also
 
 
-
 Minimist
 ========
 -The best way to deal with key:value arguements is by using the 'minimist' library.
@@ -328,7 +259,6 @@ prettier
 tab nine
 thunderclient
 ESLint
-
 
 
 Debug NodeJs Code
@@ -353,12 +283,8 @@ backtrace, bt         Print the current backtrace
    c. go to Debug Panel, click 'Run' button
 
 
-
-
-
-
 NPM (Node Package Manager)
-==========================
+======================================================
 -npm is the standard package manager for Node.js.
 -Node Package Manager (NPM) provides two main functionalities:
 	1.Online repositories for node.js packages
@@ -424,10 +350,8 @@ npm i --no-optional  --> will prevent optional dependencies from being installed
 
 
 
-
-
 NPM Global vs Local Installation
---------------------------------
+-------------------------------------------------------------------
 -By default, NPM installs any dependency in the local mode. 
 -Local mode refers to the package installation in node_modules directory of our project.
 -Locally deployed packages are accessible via require() method. 
@@ -451,10 +375,8 @@ NPM Global vs Local Installation
 -If we want to use a module in shell/command-prompt not using require(), install that globally.
  
 
- 
- 
 Package.json
-============
+==========================================
 -Contains the metadata of the project.
 -Helps NPM to understand how the project should be handled along with its dependencies.
 -package.json files contain the below information.
@@ -493,10 +415,8 @@ package.json  VS  package-lock.json
  in package-lock.json - there is neither ~ nor ^
 
 
-
-
 NPX
-===
+==============================================
 NPX : Node Package Executer (used to execute Node.js packages)
 -executes Node.js commands without installing them.
 -When you install NPM version 5.2.0 or higher, get NPX installed
@@ -537,7 +457,6 @@ Nodemon Features:
 -Open source and available on github.
  
 
-
 Node.js Global Objects
 ======================
 -Node.js global objects are global in nature and available in all modules.
@@ -576,7 +495,7 @@ setImmediate() vs setTimeout()
 
 
 Symbol 
-======
+============================================
 -A 'symbol' represents a unique identifier.
 -Symbols are used to add unique property keys to an object that won’t collide with keys.
 -create a symbol by calling the Symbol(), not by using new keyword.
@@ -596,7 +515,7 @@ Symbol
 
 
 This
-====
+========================================
 -this is determined when a function is called. Not when a function is created.
 -In the top-level code in a Node module, 'this' is equivalent to module.exports. That's the empty object.
 ex: console.log(this, this === module.exports); //true
@@ -614,7 +533,7 @@ ex: console.log(this, this === module.exports); //true
 
 
 NodeJs Modules
-==============
+=================================================
 -A way of encapsulating code in to separate logical units.
 -Module:A set of functions you want to include in your application.
 -In Node.js module system, each file is treated as a separate module.
@@ -625,7 +544,7 @@ NodeJs Modules
 
 
 Core Modules:
--------------
+------------------------------------
 os-Get OS information
 fs-work with the file system
 path-handles path elegantly
@@ -638,7 +557,7 @@ util-util module includes utility functions useful for programmers.
 
 
 Local(Custom) Modules 
-=====================
+==========================================
 -Node.js has two types of modules: 
 	1. ES modules 
 	2. CommonJS modules
@@ -659,9 +578,8 @@ External Modules(minimist,chalk,validator,lodash,moment)
    console.log(validator.isEmail('abc@gmail.com')) // true
 
 
-
 Node.js OS Module
-=================
+=================================
 -The OS module provides information about the computer's operating system.
 
 arch()	      Returns the operating system CPU architecture-32/64
@@ -683,9 +601,8 @@ availableParallelism()
 constants	 Returns an object containing the operating system's constants for process signals, error cotes etc.
 
 
-
 Node.js fs module
-=================
+============================
 -The fs module provides a lot of very useful functionality to access and interact with the file system.
 -There is no need to install it. Being part of the Node.js core, it can be used by simply requiring it. and have access to all its methods.
 
@@ -722,7 +639,7 @@ Note: UTF-8 is an encoding system for Unicode. It can translate any Unicode char
 
 
 JSON
-====
+=============
 -Node has some built in utilities that make it easy to read and write JSON files.
 -The simplest way to read a JSON file is to require it. 
  ex: const config = require("./config.json");
@@ -733,13 +650,9 @@ JSON
   const customer = JSON.parse(jsonString);
   
 
-
-
 What is an error-first callback?
 ---------------------------------
 in NodeJS The first argument is always an error object that the programmer has to check if something went wrong.
-
-
 
 
 Node.js URL Module
@@ -757,10 +670,8 @@ let urlString = url.format(urlObj)
 console.log(urlString)
 
 
-
-
 Node.js Path Module
-===================
+====================================
 -The Path module provides a way of working with directories and file paths.
 sep	        Returns the segment separator specified for the platform
 delimiter	Returns the delimiter specified for the platform
@@ -788,7 +699,7 @@ ans: 1. Supports separators (\ or /) for different OS.
 
 
 join() vs resolve()
-===================
+===============================
 -join() concatenates(joins) the path segments.
 -resolve() creates an absolute path from the root. 
 
@@ -800,11 +711,8 @@ join() vs resolve()
 https://www.scaler.com/topics/nodejs/path-module-in-node-js/
 
 
-
-
-
 Process Module
-==============
+==============================
 -Process Module provides the env property which hosts all the environment variables that were set at the moment the process was started.
 Note: process does not need a "require", it's automatically available.
 -If you have multiple environment variables in your node project, create an .env file in the root directory of project, and then use the dotenv package to load them during runtime.
@@ -845,10 +753,8 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 
-
-
 Child Processes Module
-======================
+=========================================
 -Node.js is single-threaded, non-blocking but running a single thread in a CPU cannot handle increasing workload.
 -The child_process module can be used to start child processes, and those child processes can easily communicate with each other with a messaging system.
 -There are four different ways to create a child process in Node:
@@ -868,7 +774,6 @@ execFile() : execute a file (bat/sh)
 spawn(): when the command we want to run can output a large amount of data
 
 fork() : communication channel is established to the child process when using fork, so we 	can use the send function on the forked process along with the global process object itself to exchange messages between the parent and forked processes.
- 
  
  
 HTTP Module
@@ -897,7 +802,7 @@ Note:Unless you change the path to your favicon in an HTML document, browsers wi
 
 
 HTTP Methods
-============
+===========================================
 https://testfully.io/blog/http-methods/
 
 GET - Retrieve a resource/Retrieve data from DB
@@ -920,13 +825,12 @@ HEAD - method returns info about resource (http version/length/type)
 
 
 http status codes
-=================
+========================================
 1xx Informational  (100-Continue,101-switching Protocols,102-processing)
 2xx Success		   (200-OK,201-created,202-accepted,204-No Content)
 3xx Redirection	   (300-Multiple Choices,301-Moved Permanently,302-Found,304-Not Modified)
 4xx Client Error   (400-Bad Request,401-Unauthorized,403-Forbidden,404-Not Found)
 5xx Server Error   (500-Internal Server Error,502-Bad Gateway,503-Service Unavailable)
-
 
 
 
@@ -959,8 +863,6 @@ http status codes
 505 HTTP Version Not Supported
 
 
-
-
 Route-Parameter
 ===============
 1. PathParam
@@ -982,17 +884,15 @@ Route-Parameter
 
 
 Query String Module
-===================
+============================
 -Node.js Query String provides methods to deal with query string. 
 -It can be used to convert query string into JSON object and vice-versa.
 querystring.parse(str[, sep][, eq][, options])	queryString To object.
 querystring.stringify(obj[, sep][, eq][, options]) object to string.
 
 
-
-
 Node.js Streams
-===============
+=============================
 -Streams are objects that let you read data from a source or write data to a destination in continuous fashion.
 -When we try to read a file, the contents of the file is read and all the content gets saved in memory
 -Streams read chunks of data piece by piece, processing its content without keeping it all in memory.
@@ -1009,11 +909,8 @@ Piping the Streams:
 -Piping is a mechanism where we provide the output of one stream as the input to another stream.
 
 
-
-
-
 Express.JS
-==========
+================================
 -Express.js is a web application framework for building RESTful APIs with Node.js.
 -a framework is a set of helper functions,tools and rules that help us to build our application.
 -It provides various features that make web application development fast and easy which otherwise takes more time using only Node.js.
@@ -1024,7 +921,7 @@ https://expressjs.com/en/starter/examples.html
 
 
 Advantages of Express.js
-========================
+==========================================
 -Makes Node.js web application development fast and easy.
 -Easy to configure and customize.
 -Allows to define routes of your application based on HTTP methods and URLs.
@@ -1036,9 +933,8 @@ Advantages of Express.js
 -Easy to connect with databases such as MongoDB, Redis, MySQL.
 
 
-
 How to use Express
-==================
+==================================
 1. import express
    const express = require('express')
 2. create an instance of express.
@@ -1058,8 +954,6 @@ app.delete()
 app.listen()
 app.use()
 app.all()
-
-
 
 app.use() vs app.get()
 ======================
@@ -1088,12 +982,9 @@ app.all( "/book/*" , handler);
 // will match /book/subject
 
 
-
-
 Express Routers
 ===============
 -Routing refers to how an application’s endpoints (URIs) respond to client requests.
-
 
 
 Express.js Request Object Properties
@@ -1108,7 +999,6 @@ req.params
 req.path
 req.protocol
 req.query
-
 
 
 Response methods
@@ -1127,7 +1017,6 @@ res.download()	Prompt a file to be downloaded.
 res.sendStatus()	Set the response status code and send its string representation as the response body.
 
 
-
 Serving static files in Express
 ===============================
 -To serve static files such as images, CSS files, and JavaScript files, use the express.static() built-in middleware function in Express. 
@@ -1139,7 +1028,6 @@ express.static(root, [options])
 	app.use(express.static('files'))
 	
 	
-
 Middlewares
 ===========
 -Middlewares are like a middleman between a request and the response in a REQUEST → RESPONSE cycle.
@@ -1157,8 +1045,6 @@ app.use((req, res, next) => {
 Order of Middleware Calls
 =========================
 -The order in which they are written/included in the file; the order they are executed.
-
-
 
 
 Body-parser
@@ -1181,7 +1067,6 @@ Note: ExpressJS provides its inbuilt functions for parsing request body
 	app.use(express.urlencoded()); 
  
 
-
 Express PathParam & QueryParam
 ==============================
 1. Path-Param
@@ -1193,15 +1078,11 @@ Express PathParam & QueryParam
 	const {searchWord,filter} = req.query;
 
 
-
 cookie-parser
 =============
 -It parses Cookie header and populate req.cookies with an object keyed by cookie names. 
 	var cookieParser = require('cookie-parser');
 	app.use(cookieParser())
-
-
-
 
 
 Express generator
@@ -1214,7 +1095,6 @@ Express generator
 Folder Structure for NodeJS & ExpressJS project
 ================================================
 https://dev.to/mr_ali3n/folder-structure-for-nodejs-expressjs-project-435l
-
 
 
 CORS(Cross-Origin-Resource-Sharing)
@@ -1246,7 +1126,6 @@ var corsOptions = {
 }
 
 https://www.npmjs.com/package/cors
-
 
 
 Events
@@ -1287,7 +1166,6 @@ setMaxListeners()		Sets the maximum number of listeners allowed for one event. D
 
 
 
-
 Template Engines for Node.js
 ============================
 -Template engine helps  to create an HTML template with minimal code. 
@@ -1295,8 +1173,6 @@ Template Engines for Node.js
 -Template engines for Node.js (Jade/pug,Vash,EJS,Handlebars)
 
 https://expressjs.com/en/guide/using-template-engines.html
-
-
 
 
 Data Access in Node.js
@@ -1307,6 +1183,7 @@ Data Access in Node.js
 ex:npm install mysql (for MySQL)
    npm install oracledb (for Oracle)
    npm install mongodb (MongoDB)
+
 
 
 MongoDB
@@ -1387,11 +1264,7 @@ MongoDB Compass
    mongodb://localhost:27017  (OR)
    mongodb://127.0.0.1:27017
 
- 
 
- 
-
- 
 MongoDB Queries/Commands
 ========================
 https://www.geeksforgeeks.org/mongodb-tutorial/
@@ -1511,9 +1384,6 @@ db.employees.deleteMany({name:'sanjay',name:'geeta',name:'sameer'})
 db.inventory.find( { $and: [ { price: { $ne: 1.99 } }, { price: { $exists: true } } ] } )
 
  
-
- 
- 
  
 Managing Indexes
 ================
@@ -1535,8 +1405,6 @@ Managing Indexes
  db.user.dropIndexes()
  
 
-
-
 Aggregation Pipelines
 ======================
 -An aggregation pipeline consists of one or more stages that process documents:
@@ -1548,7 +1416,6 @@ Aggregation Pipelines
  input --> $match  --> $group --> $sort --> output
 
 $match, $group, $limit, $project, $sort, $addFields, $count, $lookup, $out
-
 
 
 Assignment
@@ -1614,7 +1481,6 @@ Use a View to Join Two Collections
 ] )
 
 
-	
 
 MongoDB Atlas
 =============
@@ -1738,8 +1604,6 @@ Commands
 -INFO (to check redis server details)
 
 
-
-
 Fake APIs to fetch data
 =======================
 https://api.openweathermap.org/data/2.5/weather?q=${city}&mode=json&units=metric&cnt=5&appid=fbf712a5a83d7305c3cda4ca8fe7ef29
@@ -1751,10 +1615,6 @@ https://en.wikipedia.org/w/api.php?action=parse&format=json&section=0&page=india
 https://api.github.com/users/google
 
 https://dummyjson.com/docs/products
-
-
-
-
 
 
 
@@ -1780,8 +1640,6 @@ Upload File
 
 
 
-
-
 Socket IO / Chat Application
 ============================
 -Socket.IO is a library that enables low-latency, bidirectional and event-based communication between a client and a server.
@@ -1794,8 +1652,6 @@ io.on('connection', socket => {
 });
 
 https://socket.io/docs/v4/tutorial/introduction
-
-
 
 
 
@@ -1824,7 +1680,6 @@ ESLint
 
 
 
-
 Swagger
 =======
 -It’s very important to write documentation for APIs so that whoever consumes those APIs understand them, implement them, and play around with them.
@@ -1846,8 +1701,6 @@ Steps:
 
 
 https://stackoverflow.com/questions/45518568/can-i-write-same-path-names-for-different-methods-in-rest-api
-
-
 
 
 
@@ -2039,12 +1892,8 @@ How to measure and improve Node.js performance
 
  
 
-
-
 NodeJS Security Risks
 =====================
-
-
 
 
 Best Practices to keep NodeJS Secure
@@ -2066,8 +1915,6 @@ Web-Hooks
 =========
 
 
-
-
 		SOAP                        REST
 ======================================================
 1.A XML based Message protocol    1.Architectural style
@@ -2077,16 +1924,13 @@ Web-Hooks
 5.Performance - Not Great		  5.Performs better than SOAP
 
 
-
 CRON
 =====
 https://www.npmjs.com/package/node-cron
 
 
-
-
 References:
-===========
+==================
 1. https://riptutorial.com/Download/node-js.pdf
 2. https://nodejs.dev/en/learn/
 3. https://www.tutorialsteacher.com/nodejs
@@ -2096,7 +1940,6 @@ References:
 7. https://www.geeksforgeeks.org/nodejs/
 8. https://training-course-material.com/training/Nodejs
 9. https://expressjs.com/en/advanced/best-practice-performance.html
-
 
 
 Interview Questions & Answers
@@ -2117,13 +1960,11 @@ passportjs npm
 node profiler : https://nodejs.org/en/learn/getting-started/profiling
 
 
-
 Sample Projects
 ===============
 https://github.com/itzabhinavarya/ShopingKaro
 https://github.com/idurar/mern-admin
 https://github.com/claykabongok/CRUD_REST_API_NODEJS_TYPESCRIPT
-
 
 
 ---------------------------------------
