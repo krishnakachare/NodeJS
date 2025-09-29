@@ -1,5 +1,4 @@
 # Recommended to learn JavaScript before Node.js:
-
     Variables
     Scopes
     Functions
@@ -10,8 +9,7 @@
     fetch()
     ES-6 and beyond
     (class,module,rest,spread,promise,async await)
-
----
+------------------------------------------------------
 
 # 📘 Node.js Backend Development Syllabus:
 
@@ -30,6 +28,9 @@
   -Global Objects
 
 -Events (Event Loop,Event Emitter)
+- JS on Server
+- libuv & Event Loop
+- Thread pool in libuv
 
 ---
 
@@ -77,6 +78,8 @@
 - Basic routing and RESTful APIs without frameworks
 
 ---
+- Microservices vs Monolith - How to Build a Project
+- Features, HLD, LLD & Planning
 
 # 6. Express.js Framework
 
@@ -122,6 +125,12 @@
 -NodeJS & MongoDB Connection
 -Mongoose,graphQL
 
+
+- Logical DB Query & Compound Indexes
+
+- ref, Populate & Thought process of writing APIs
+
+
 ---
 
 # 9. RESTful API Development
@@ -141,8 +150,10 @@
 - JWT (JSON Web Tokens)
 - Role-based access control
 - Session and cookies (with `express-session`)
+- Encrypting Passwords
 
 ---
+- Data Sanitization & Schema Validations
 
 # 11. Testing
 
@@ -238,7 +249,28 @@
 | Cache/Queue     | Redis                                              |
 | Monitoring      | LogRocket, Sentry, Prometheus, Grafana             |
 
----
+------------------------------
+| Launching a AWS Instance and deploying frontend
+
+| Nginx & Backend Node App Deployment
+
+| Adding a Custom Domain Name
+
+| Sending Emails using Amazon SES
+
+| Keeping Our Credentials Safe Using dotenv Files
+
+| Scheduling Cron Jobs
+
+| Payment Gateway Integration ft. Razorpay
+
+| Web Sockets & socket.io
+
+| Building Real-time Live Chat Feature
+
+Updating nginx config
+
+------------------------------
 
 # NodeJS Projects:
 
@@ -254,3 +286,4 @@
 -Swagger
 -Unit testing
 -JWT Token
+-PhonePe Integration
