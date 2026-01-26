@@ -1,0 +1,132 @@
+Relationships: The link or bond between two things.
+
+Thing: people, objects, network, computers
+
+    ==> Database ==> masai
+        ==> Collection ==> Multiple Collections ==> emps, hr, marketing, curriculum, sales, community
+            ==> Documents
+
+In our case we are going to study about the link/bond (relationship) between ddifferent collections in a DB.
+
+Types of Relationships
+    1. 1 - 1 Relationship
+    2. 1 - Many Relationship
+    3. Many - Many Relationship
+
+Why do we need relationships?
+    Masai School Example
+     1. Students
+     2. Instructors
+
+    *Student's Collection* ==> Documents
+    _id:"------"
+    student_code
+    batch
+
+    *Instructor's Collection* ==> Documents
+    _id:"-------"
+    emp_code
+    sub
+    exp
+    department
+
+    db.students.find({city:"BLR"}) ==> Student's Data
+    db.instructors.find({city:"BLR"}) ==> Instructor's Data
+    db.operations.find({city:"BLR"})
+
+    *user's Collection*
+    name
+    email
+    gender
+    age
+    blood group
+    phone number
+    city
+
+1 - 1 Relationship
+
+    *Student's Collection* ==> Documents
+    _id:"------"
+    student_code
+    batch
+
+    *user's Collection* ==> Documents
+     _id:"------"
+    name
+    email
+    gender
+    age
+    blood group
+    phone number
+    city
+
+    1st Way: Put the user id in Student's Schema
+    2nd: Way: Put the student id in user's schema
+
+1 - Many Relationship
+
+    Linkedin:
+        ==> Posts => db.posts.find().pretty()
+        ==> Comment Collection 
+        {}
+
+        posts=[
+            {
+                id:1
+                title:"First Post"
+                body:"Post Body"
+                no_of_likes: 45
+                no_of_reactions:56
+                comments:[1,2,3,4]
+            },
+            {
+                id:2
+                title:"First Post"
+                body:"Post Body"
+                no_of_likes: 45
+                no_of_reactions:56
+                comments:[23,34,56]
+            },
+            {
+                id:3
+                title:"First Post"
+                body:"Post Body"
+                no_of_likes: 45
+                no_of_reactions:56
+                comments:[34,45,67]
+            },
+            20000
+        ]
+
+    Because 1 Post can have multiple comments
+
+    1st Way: Put the Post id in comments schema
+    2nd way: Put the comment id in post schema
+
+Many - Many Relationship
+
+    Question: How to program a server? ==> nodejs, java, express, http
+
+    One tag can be used in multiple questions
+    one question can have multiple tags as well
+
+What is the best way to connect collections?
+
+    ==> Finding out the dependent and independent collection
+
+    1 - 1 Relationship
+        ==> Dependent: Student Collection
+        ==> Independent: User Collection
+
+            ==> Put user id in student's schema
+
+    1 - Many Relationship
+        ==> Dependent: Comments Collection
+        ==> Independent: Posts Collection        
+
+            ==> Put post id in comment's schema
+
+Consclusion ==> PUT THE INDEPENDT'S ID INSIDE DEPENDENT'S SCHEMA (PARENT'S ID IN CHILD'S SCHEMA)
+
+
+

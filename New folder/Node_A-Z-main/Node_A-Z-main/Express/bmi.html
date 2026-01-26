@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <style>
+        *{
+            font-family: 'IBM Plex Sans', sans-serif; font-family: 'Montserrat', sans-serif;
+        }
+        div{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="centerdiv">
+        <h1>BMI Calculator</h1>
+        <br>
+        <form method="post">
+            <input type="text" name="weight" placeholder="Enter your weight (in kg)">
+            <br> <br>
+            <input type="text" name="height" placeholder="Enter your height (in m)">
+            <br> <br>
+            <button type="submit">Calculate BMI</button>
+        </form>
+    </div>
+</body>
+</html>
