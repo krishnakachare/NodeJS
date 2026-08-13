@@ -1,0 +1,50 @@
+1. Browser Vs NodeJS
+2. If Node.js is single-threaded, how does it handle concurrency.
+3. advantages of using promises instead of callbacks.
+4. Module Systems
+5. What does event-driven programming mean?
+6. process.nextTick() and setImmediate()
+7. What is an EventEmitter 
+8. package.json vs package-lock.json
+9. ChildProcess Module
+  spawn() vs fork()
+10. piping in Node.js
+   retrieve data from one stream and pass output to another stream
+11. middleware in Node.js
+12. Libuv
+13. Streams 
+14. WebSocket communication 
+15. HTTP status 401  vs 403
+16. What is a webhook
+17. How to obtain the IP address of the user in Node.js (request.socket.remoteAddress)
+18. redis
+19. CORS
+20. What is clustering in Node.js, and how can it be used to improve application performance
+21. GRAPHQL
+22. Provide some example of config file separation for dev and prod environments
+23. Swagger
+https://intellipaat.com/blog/interview-question/node-js-interview-questions/#Advanced_Node_JS_Interview_Questions_6_to_10_Years_Experience
+
+
+ExpressJS
+=========
+1. middleware concept in Express.js
+2. body-parser
+3. folder structure
+
+
+MongoDB
+=======
+1. Sharding in MongoDB
+2. can we have index on array field(ensureIndex())
+3. ACID
+4. How to perform join in mongodb ($lookup)
+5. covered query
+6. index cardinality
+7. BSON vs JSON
+8. What is the purpose of an ObjectId in MongoDB? How is it generated?
+9. difference between findOne() and find()
+10. How do you perform a case-insensitive search in MongoDB
+11.  indexing in MongoDB, and why is it important
+
+
