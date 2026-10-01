@@ -1,1 +1,1 @@
-NodeJs_Topics/30_Images/node_process_model.png
+![NodeJs](NodeJs_Topics/30_Images/node_process_model.png)
