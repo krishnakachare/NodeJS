@@ -1,0 +1,3 @@
+Now we are reading this text in streaming manner. Look at the browser. Check!
+
+Now we are reading this text in streaming manner using just one line of code. Look at the browser. Check!
