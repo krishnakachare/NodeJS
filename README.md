@@ -1,5 +1,3 @@
-NodeJs_Topics\30_Images\node_process_model.png
-
 ### NodeJS 👉
 
 ### Author Links:
@@ -17,4 +15,15 @@ NodeJs_Topics\30_Images\node_process_model.png
 
 - [NodeJs Syllabus](NodeJs_Syllabus/NodeJs_Syllabus.md)
 
-- ![NodeJs](NodeJs_Topics/30_Images/node_process_model.png)
+- 🔗[JS Visualizer:](https://www.jsv9000.app/)
+
+- 🔗[NodeJs Offitial Doc:](https://nodejs.org/docs/latest/api/)
+- 🔗[NodeJs GitHub:](https://github.com/nodejs/node)
+
+- 🔗[V8:](https://v8.dev/)
+- 🔗[V8 GitHub:](https://github.com/v8/v8)
+
+- 🔗[ECMA:](https://ecma-international.org/publications-and-standards/standards/ecma-262/)
+- 🔗[tc39:](https://tc39.es/ecma262/)
+
+  ![NodeJs](NodeJs_Topics/30_Images/node_process_model.png)
